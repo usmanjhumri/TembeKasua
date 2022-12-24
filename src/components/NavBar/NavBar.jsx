@@ -14,6 +14,8 @@ const NavBar = () => {
     }}>
             <Container>
 
+                <Box>
+
                 <Box sx={{
                     display:"flex"
                 }}>
@@ -27,11 +29,23 @@ const NavBar = () => {
 
                     </div>
                     <div style={{
-                        margin:"1.2rem 5rem"
+                        margin:"1rem 5rem"
                     }}>
-                    <input type="text" placeholder='Search food items, classification and categories' />
+                    <input type="text" placeholder='Search food items, classification and categories' style={{
+                        background:"#F9F9F9",
+                        border:"1px solid #BDBDBD",
+                        borderRadius:"11px",
+                        padding:"0.5rem 3rem",
+                        borderRight:"none",
+                        zIndex:"1"
+                    }} />
+                    <button id="clear" style={{
+
+                    }}>search</button>
 
                     </div>
+
+                </Box>
 
                 </Box>
 

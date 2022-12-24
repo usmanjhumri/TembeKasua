@@ -1,0 +1,10 @@
+#clear{
+    background: #009933;
+    border: 1px solid #BDBDBD;
+    border-radius: 11px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+    margin-right: 2rem;
+  
+}
