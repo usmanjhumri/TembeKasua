@@ -1,0 +1,164 @@
+/* Global Styles */
+.button {
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-family: "Archivo", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.button.button-green {
+    background-color: #009933;
+    color: #fff;
+}
+.button.button-grey {
+    background-color: #bdbdbd;
+    color: #fff;
+}
+
+/* ------------- */
+.nav-container {
+    max-width: 1410px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.upper-nav {
+    background-color: #f0f5f1;
+}
+.upper-nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 48px;
+}
+.upper-nav .nav-container > a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.upper-nav .nav-container > a > span {
+    font-weight: 700;
+}
+.upper-nav .nav-container > div > a + a {
+    margin-left: 26px;
+}
+.upper-nav .nav-container > div > a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Main nav */
+.main-nav {
+    background-color: #f9f9f9;
+}
+.main-nav .nav-container {
+    display: grid;
+    grid-template-columns: 2fr minmax(200px, 500px) 1fr 430px;
+    gap: 16px;
+    height: 104px;
+}
+.main-nav .nav-container > * {
+    align-self: center;
+}
+.main-nav .logo-div > img {
+    cursor: pointer;
+}
+
+/* Main nav left */
+.main-nav .input-div {
+    display: flex;
+    height: 42px;
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    background-color: #f9f9f9;
+    border-radius: 11px;
+    padding-left: 21px;
+}
+/* input div */
+.main-nav .input-div > input {
+    flex: 1;
+    background-color: transparent;
+}
+.main-nav .input-div > input::placeholder {
+    color: #bdbdbd;
+}
+.main-nav .input-div > button {
+    height: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
+    border-radius: 10px;
+    background-color: #009933;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.main-nav .input-div > input::placeholder {
+    color: #bdbdbd;
+}
+
+.main-nav .links-div {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+.main-nav .links-div > a {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav .menu-div {
+    display: none;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.main-nav .menu-div > svg {
+    cursor: pointer;
+}
+.drawer-div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    background-color: #f0f5f1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: right 0.3s ease;
+}
+.show-drawer {
+    right: 0 !important;
+}
+.drawer-div > div {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+@media screen and (max-width: 930px) {
+    .main-nav .nav-container {
+        grid-template-columns: 1fr 2fr auto auto;
+    }
+    .main-nav .links-div {
+        display: none;
+    }
+    .main-nav .menu-div {
+        display: flex;
+        justify-content: end;
+    }
+}
