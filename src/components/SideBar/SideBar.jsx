@@ -21,28 +21,22 @@ const MenuContainer = {
 };
 const submenu = { "&:hover": { color: "green", cursor: "pointer" } };
 
-const Mainpage = () => {
+const SideBar = () => {
   const [openSubMenu, setopenSubMenu] = useState(false);
   return (
     <div>
       <Box>
-        {/* <Box
-          sx={{
-            minHeight: "60px",
-            width: "100%",
-            boxShadow: "0px 0px 2px 2px rgba(10,10,10,0.9)",
-          }}
-        >
-          Header
-        </Box> */}
+       
         <Box sx={{ display: "flex" }}>
           <Box
             sx={{
               minWidth: "auto",
-              width: { xs: "50px", md: "220px" },
+              width: { xs: "50px", md: "200px" },
               height: "100vh",
               overflow: "hidden",
-              boxShadow: "0px 0px 2px 2px rgba(10,10,10,0.4)",
+              background:"#FFFFFF",
+              // marginLeft:{xs:"1.4rem",md:"4rem"},
+              boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)",
               "&:hover": {
                 WebkitTransition: "width 1s ease-in-out",
                 MozTransition: "width 1s ease-in-out",
@@ -142,11 +136,10 @@ const Mainpage = () => {
               </Box>
             </Box>
           </Box>
-          <Box sx={{ maxWidth: "calc(100%-250px)" }}>Content</Box>
         </Box>
       </Box>
     </div>
   );
 };
 
-export default Mainpage;
+export default SideBar;

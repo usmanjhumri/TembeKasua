@@ -3,7 +3,7 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 
 import PriNavbar from './components/PriNavbar/PriNavbar'
-import SideBar from './components/SideBar/sidebar'
+import SideBar from './components/SideBar/Sidebar'
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <PriNavbar/>
       <NavBar/>
       <SideBar/>
+      
      
 
     </div>

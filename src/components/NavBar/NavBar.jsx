@@ -70,7 +70,6 @@ export default function NavBar() {
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
-    setMobileMoreAnchorEl(event.currentTarget);
 
   };
 
@@ -130,7 +129,7 @@ export default function NavBar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge  color="error">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -143,7 +142,7 @@ export default function NavBar() {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge  color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -184,7 +183,7 @@ export default function NavBar() {
             
           </Box>
           <Search sx={{
-            display:{xs:"none", sm:"block", md:"block"}
+            display:{xs:"none",  md:"block"}
           }}>
         
             <StyledInputBase
@@ -198,7 +197,7 @@ export default function NavBar() {
           </Search>
           <Box sx={{ 
             flexGrow: 1, 
-                marginLeft:"14.2rem"
+                // marginLeft:"14.2rem"
 
         }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' },
@@ -218,17 +217,7 @@ export default function NavBar() {
             <Button sx={{
             }}>Sign in</Button>
 
-            {/* <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <Button>Create</Button>
-            </IconButton> */}
+            
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
