@@ -10,15 +10,9 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MessageIcon from "@mui/icons-material/Message";
 import InfoIcon from "@mui/icons-material/Info";
-import Footer from '../footer/Footer'
-import About from "../About/About";
-import Divide from "../Divider/Divider";
-import Recommended from "../recommended/recommend";
-import Sharp from "../Sharp-Sharp/Sharp";
-import BasicTabs from "../Tabs/Tabs";
-import Section_2 from "../Section_2/Section_2";
-import Section_1 from "../Section_1/Section_1";
-import Official from "../officialstore/Offical";
+import MainPage from "../MainPage/MainPage";
+import PriNavbar from '../PriNavbar/PriNavbar'
+import NavBar from '../NavBar/NavBar'
 const MenuContainer = {
   display: "flex",
   alignItems: "center",
@@ -27,16 +21,17 @@ const MenuContainer = {
   whiteSpace:'nowrap',
   color: "grey",
   "&:hover": { color: "green", cursor: "pointer" },
-};
+}
 const submenu = { "&:hover": { color: "green", cursor: "pointer" } };
 
-const SideBar = () => {
+const SideBar = ({childComponent}) => {
   const [openSubMenu, setopenSubMenu] = useState(false);
   return (
     <div>
       <Box>
-       
-        <Box sx={{ display: "flex", zIndex:"100" }}>
+      <PriNavbar/>
+      <NavBar/>
+        <Box sx={{ display: "flex" }}>
           <Box
             sx={{
               minWidth: "auto",
@@ -146,16 +141,10 @@ const SideBar = () => {
             </Box>
           </Box>
           <div>
-            <Section_1/>
-            {/* <Section_2/> */}
-            <BasicTabs/>
-            <Sharp/>
-            <Recommended/>
-            {/* <Official/> */}
-            <Official/>
-            <Divide/>
-            <About/>
-            <Footer/>
+{
+  childComponent
+}
+
           </div>
         </Box>
       </Box>

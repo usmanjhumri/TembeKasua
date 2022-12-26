@@ -1,16 +1,49 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
-import 'react-multi-carousel/lib/styles.css';
 import Data from './Section_2data'
 import bg from './leavebg.png'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import './Section_2.css'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './Section_2.css';
 
-
+const settings = {
+       
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+  };
 
 const Section_2 = () => {
-
+    
 
     return (
         <>
@@ -38,64 +71,22 @@ const Section_2 = () => {
                             <p style={{ color: '#009933', padding: '0px 0px 0px 29px', margin: '10px 0' }}>View more &gt;</p>
                         </Grid>
                         <Grid sx={{ position: 'relative', textAlign: 'center', margin: 'auto' }} item xs={12} md={10}>
-                            <div style={{ display: 'flex' }}>
-                                <h1 className='preArrow'> &lt;</h1>
-                                <h1 className='nextArrow'> &gt; </h1>
-                            </div>
-                            <Swiper
-                                style={{ width: '92%' }}
-                                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                                navigation={{
-                                    nextEl: ".nextArrow",
-                                    prevEl: ".preArrow",
-                                    enabled: true
-                                }}
-                                spaceBetween={30}
-                                slidesPerView={4}
-                                autoplay={{ delay: 3000 }}
-                                loop
-                                breakpoints={{
+                            
+                           
 
-                                    // when window width is >= 320px
-
-                                    200: {
-                                        slidesPerView: 1,
-
-                                    },
-                                    320: {
-                                        slidesPerView: 1,
-
-                                    },
-                                    // when window width is >= 480px
-                                    480: {
-                                        slidesPerView: 2
-                                    },
-                                    640: {
-                                        slidesPerView: 3
-                                    },
-                                    // when window width is >= 640px
-                                    750: {
-                                        slidesPerView: 4,
-
-                                    }
-
-                                }}
-
-                            >
+                          
                                 {
                                     Data.map((item, ind) => {
                                         return (
                                             <>
-                                                <SwiperSlide key={ind}><img style={{ borderRadius: '15px', width: '100%' }} src={item.image} alt="" />
+                                                <Slider {...settings}>
+                                        <img style={{ borderRadius: '15px', width: '100%' }} src={item.image} alt="" />
                                                     <div className="scndLast">
                                                         <p style={{ color: '#828282', fontSize: '14px' }}>Ugbema  Market</p>
 
                                                         <button className='btn-swiper'>Shop now</button>
                                                     </div>
-
-                                                </SwiperSlide>
-
-
+                                                    </Slider>
 
 
                                             </>
@@ -106,7 +97,6 @@ const Section_2 = () => {
 
 
 
-                            </Swiper>
                         </Grid>
                     </Grid>
                 </div>
