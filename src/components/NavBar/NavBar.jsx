@@ -189,10 +189,10 @@ export default function NavBar() {
            
             display:{xs:"none", md:"flex", sm:"flex"},
           }}>
-            <div style={{
+            <div className='nav_search_btn' style={{
               marginLeft:"3rem"
             }}>
-            <input type="text" className='nav_input'  placeholder='Search food items, classification and categories ' style={{
+            <input type="text" id='navinput'  placeholder='Search food items, classification and categories ' style={{
                 background:"#F9F9F9",
                 border:"1px solid #BDBDBD",
                 borderRadius:"11px",
@@ -205,8 +205,8 @@ export default function NavBar() {
               </div>
 
               <div>
-            <button style={{
-                borderRadius:"0 11px 0 11px",
+            <button  style={{
+                borderRadius:"11px",
                 padding:"0.5rem 1rem",
                 border:'1px solid #BDBDBD',
                 background:"#009933",

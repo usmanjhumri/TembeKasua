@@ -10,6 +10,15 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MessageIcon from "@mui/icons-material/Message";
 import InfoIcon from "@mui/icons-material/Info";
+import Footer from '../footer/Footer'
+import About from "../About/About";
+import Divide from "../Divider/Divider";
+import Recommended from "../recommended/recommend";
+import Sharp from "../Sharp-Sharp/Sharp";
+import BasicTabs from "../Tabs/Tabs";
+import Section_2 from "../Section_2/Section_2";
+import Section_1 from "../Section_1/Section_1";
+import Official from "../officialstore/Offical";
 const MenuContainer = {
   display: "flex",
   alignItems: "center",
@@ -27,13 +36,13 @@ const SideBar = () => {
     <div>
       <Box>
        
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", zIndex:"100" }}>
           <Box
             sx={{
               minWidth: "auto",
-              width: { xs: "50px", md: "200px" },
-              height: "100vh",
-              overflow: "hidden",
+              width: { xs: "40px", md: "200px" },
+              height: "auto",
+              // overflow: "hidden",
               background:"#FFFFFF",
               // marginLeft:{xs:"1.4rem",md:"4rem"},
               boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)",
@@ -136,6 +145,18 @@ const SideBar = () => {
               </Box>
             </Box>
           </Box>
+          <div>
+            <Section_1/>
+            {/* <Section_2/> */}
+            <BasicTabs/>
+            <Sharp/>
+            <Recommended/>
+            {/* <Official/> */}
+            <Official/>
+            <Divide/>
+            <About/>
+            <Footer/>
+          </div>
         </Box>
       </Box>
     </div>
