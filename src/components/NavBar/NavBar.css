@@ -1,3 +1,8 @@
 .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
     color: black !important;
 }
+
+input[type=text]:focus {
+    border: 3px solid green;
+  }
+

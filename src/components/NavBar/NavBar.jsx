@@ -47,19 +47,19 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    // paddingLeft: `calc(1em + ${theme.spacing(1)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
-}));
+// const StyledInputBase = styled(InputBase)(({ theme }) => ({
+//   color: 'inherit',
+//   '& .MuiInputBase-input': {
+//     padding: theme.spacing(1, 1, 1, 0),
+//     // vertical padding + font size from searchIcon
+//     // paddingLeft: `calc(1em + ${theme.spacing(1)})`,
+//     transition: theme.transitions.create('width'),
+//     width: '100%',
+//     [theme.breakpoints.up('md')]: {
+//       width: '30ch',
+//     },
+//   },
+// }));
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -170,55 +170,99 @@ export default function NavBar() {
         boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)"
       }}>
         <Toolbar>
-          
+
+        
+
           <Box component={'img'}
             
            
            src={LOGO}
             sx={{ display: {  sm: 'block' },
-                marginLeft:{xs:"0px", md:"4.7rem"},
-                // marginRight:{xs:"122rem", md:"0px"}
+               
         }}
           >
             
           </Box>
-          <Search sx={{
-            display:{xs:"none",  md:"block"}
+
+          <Box sx={{
+            textAlign:"center",
+           
+            display:{xs:"none", md:"flex", sm:"flex"},
           }}>
-        
-            <StyledInputBase
-            sx={{
+            <div style={{
+              marginLeft:"3rem"
+            }}>
+            <input type="text" className='nav_input'  placeholder='Search food items, classification and categories ' style={{
                 background:"#F9F9F9",
-                color:"black"
-            }}
-              placeholder="Search food items, classification and categories"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+                border:"1px solid #BDBDBD",
+                borderRadius:"11px",
+                padding:"0.5rem 1rem",
+                borderRight:"none",
+                textAlign:"left",
+                height:"2rem",
+                width:"170%"
+            }}/>
+              </div>
+
+              <div>
+            <button style={{
+                borderRadius:"0 11px 0 11px",
+                padding:"0.5rem 1rem",
+                border:'1px solid #BDBDBD',
+                background:"#009933",
+                marginLeft:"8rem",
+                color:"#FFFFFF",
+                cursor:"pointer"
+            }}>search</button>
+            </div>
+          </Box>
+        
           <Box sx={{ 
             flexGrow: 1, 
                 // marginLeft:"14.2rem"
 
         }} />
+
           <Box sx={{ display: { xs: 'none', md: 'flex' },
                 
         }}>
             
               <img src={HEART} alt="" style={{
+                cursor:"pointer"
               }} />
             
             
                 <img src={ADD_TO_CARD} alt="" style={{
-                marginLeft:"0.5rem"
+                margin:"0px 0.5rem",
+                cursor:"pointer"
+
 
                 }} />
               
-            <Button>Create Account</Button>
-            <Button sx={{
-            }}>Sign in</Button>
+            <button style={{
+              padding:"0px 1rem",
+              background:"#009933",
+              borderRadius:"10px",
+              border:"none",
+              color:"#FFFFFF",
+              cursor:"pointer"
+              // marign:"0px 2rem"
+            }}>Create Account</button>
+
+            <button style={{
+              background:"#BDBDBD",
+              padding:"0px 1rem",
+              borderRadius:"10px",
+              color:"#FFFFFF",
+              border:"none",
+              cursor:"pointer",
+              marginLeft:"0.7rem"              
+            }}>Sign in</button>
 
             
           </Box>
+
+
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
