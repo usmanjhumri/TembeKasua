@@ -1,0 +1,7 @@
+.side_nav_links{
+    text-decoration: none;
+    color: gray;
+}
+.side_nav_links:hover{
+    color: green;
+}

@@ -167,7 +167,8 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{
         background:"#FFFFFF",
-        boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)"
+        boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)",
+        padding:"0.5rem 0px"
       }}>
         <Toolbar>
 

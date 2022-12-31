@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../footer/Footer'
 import About from "../About/About";
 import Divide from "../Divider/Divider";
 import Recommended from "../recommended/recommend";
@@ -8,6 +7,8 @@ import BasicTabs from "../Tabs/Tabs";
 import Section_1 from "../Section_1/Section_1";
 import Official from "../officialstore/Offical";
 import Section_2 from "../Section_2/Section_2";
+import Dialogs from '../Dialog';
+import SellerCenter from '../SellerCenter';
 
 const MainPage = () => {
   return (
@@ -21,7 +22,10 @@ const MainPage = () => {
             <Official/>
             <Divide/>
             <About/>
-            <Footer/>
+            <Dialogs/>
+            <SellerCenter/>
+
+            
 
     </div>
   )

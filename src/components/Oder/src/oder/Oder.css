@@ -1,0 +1,21 @@
+body{
+    background:whitesmoke;
+}
+.btn:hover{
+background-color: green!important
+
+}
+.tabss{
+    margin-top: 1rem !important;
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: Archivo !important;
+    font-style: normal !important;
+    letter-spacing: 1px !important;
+    word-spacing: 1px !important;
+    padding: 1rem 2rem !important;
+
+
+
+}

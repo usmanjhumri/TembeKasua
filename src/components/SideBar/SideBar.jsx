@@ -13,6 +13,11 @@ import InfoIcon from "@mui/icons-material/Info";
 import MainPage from "../MainPage/MainPage";
 import PriNavbar from '../PriNavbar/PriNavbar'
 import NavBar from '../NavBar/NavBar'
+import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
+import './SideBar.css'
+import Popup from "../Popup";
+
 const MenuContainer = {
   display: "flex",
   alignItems: "center",
@@ -62,14 +67,22 @@ const SideBar = ({childComponent}) => {
                 <Box>
                   <HomeIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>Home</Typography>
+                <Typography>
+                  <Link className="side_nav_links" to='/'>
+                  Home
+                  </Link>
+                  </Typography>
               </Box>
               <Box>
                 <Box sx={MenuContainer}>
                   <Box>
                     <WindowIcon sx={{ fontSize: "30px" }} />
                   </Box>
-                  <Typography>Categories</Typography>
+                  <Typography>
+                    <Link className="side_nav_links" to='/Categories'>
+                    Categories
+                    </Link>
+                    </Typography>
                   <IconButton
                     onClick={() => {
                       setopenSubMenu(!openSubMenu);
@@ -88,12 +101,36 @@ const SideBar = ({childComponent}) => {
                       gap: "10px",
                     }}
                   >
-                    <Typography sx={submenu}>Grains</Typography>
-                    <Typography sx={submenu}>Tubers</Typography>
-                    <Typography sx={submenu}>Gingers</Typography>
-                    <Typography sx={submenu}>Fish</Typography>
-                    <Typography sx={submenu}>Furtilizer</Typography>
-                    <Typography sx={submenu}>Tool & Equipment</Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Grains">
+                         Grains
+                         </Link>
+                      </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Tubers">
+                         Tubers
+                         </Link>
+                         </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Gingers">
+                         Gingers
+                         </Link>
+                         </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Fish">
+                      Fish
+                      </Link>
+                       </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Furtilizer"> 
+                      Furtilizer
+                      </Link>
+                      </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Tool_&_Equipment">
+                         Tool & Equipment
+                         </Link>
+                        </Typography>
                   </Box>
                 ) : null}
               </Box>
@@ -101,42 +138,66 @@ const SideBar = ({childComponent}) => {
                 <Box>
                   <LocationOnIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>Markets</Typography>
+                <Typography>
+                  <Link className="side_nav_links" to='/Markets'>
+                  Markets
+                  </Link>
+                  </Typography>
               </Box>
 
               <Box sx={MenuContainer}>
                 <Box>
                   <TableChartIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>All Products</Typography>
+                <Typography>
+                 <Link className="side_nav_links" to='/'>
+                   All Products
+                   </Link>
+                   </Typography>
               </Box>
 
               <Box sx={MenuContainer}>
                 <Box>
                   <DeckIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>Vendors</Typography>
+                <Typography>
+                 <Link className="side_nav_links" to='/Vendors'>
+                   Vendors
+                   </Link>
+                   </Typography>
               </Box>
 
               <Box sx={MenuContainer}>
                 <Box>
                   <LocalShippingIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>Logistics</Typography>
+                <Typography>
+                 <Link className="side_nav_links" to='/Logistics'>
+                   Logistics
+                   </Link>
+                   </Typography>
               </Box>
 
               <Box sx={MenuContainer}>
                 <Box>
                   <MessageIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>Contact Us</Typography>
+                <Typography>
+                 <Link className="side_nav_links" to='/Contact_Us'>
+                   Contact Us
+                   </Link>
+                   </Typography>
               </Box>
 
               <Box sx={MenuContainer}>
                 <Box>
                   <InfoIcon sx={{ fontSize: "30px" }} />
                 </Box>
-                <Typography>About</Typography>
+                <Typography>
+                 <Link className="side_nav_links" to='/aboutUs'>
+                   About
+                   </Link>
+                   </Typography>
               </Box>
             </Box>
           </Box>
@@ -147,6 +208,9 @@ const SideBar = ({childComponent}) => {
 
           </div>
         </Box>
+        <Footer/>
+        <Popup/>
+
       </Box>
     </div>
   );

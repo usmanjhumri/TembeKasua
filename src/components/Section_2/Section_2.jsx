@@ -72,28 +72,30 @@ const Section_2 = () => {
                         </Grid>
                         <Grid sx={{ position: 'relative', textAlign: 'center', margin: 'auto' }} item xs={12} md={10}>
                             
-                           
+             
 
                           
+                            {/* <Slider {...settings}>
                                 {
                                     Data.map((item, ind) => {
                                         return (
-                                            <>
-                                                <Slider {...settings}>
+                                            
+                                                    <div>
                                         <img style={{ borderRadius: '15px', width: '100%' }} src={item.image} alt="" />
                                                     <div className="scndLast">
                                                         <p style={{ color: '#828282', fontSize: '14px' }}>Ugbema  Market</p>
 
                                                         <button className='btn-swiper'>Shop now</button>
                                                     </div>
-                                                    </Slider>
+                                                    </div>
 
 
-                                            </>
+                                           
                                         )
-
+                                        
                                     })
                                 }
+                                </Slider> */}
 
 
 

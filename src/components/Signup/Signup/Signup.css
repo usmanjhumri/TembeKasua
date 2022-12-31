@@ -1,0 +1,26 @@
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    /* max-width: none!important; */
+
+    /* max-height: none!important; */
+    /* height: auto; */
+    /* border-radius: 20px !important; */
+    /* margin: auto; */
+    /* overflow: hidden; */
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+/* border-color: #009933!important; */
+/* border:"2px" */
+}
+
+
+
+
+/* .Textfeid-Div {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+} */
+
+.btns:hover {
+    background-color: #009933 !important;
+}
