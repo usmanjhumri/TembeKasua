@@ -105,10 +105,10 @@ export default function Basictabss() {
 <Grid item xs={12} m="auto" md={1.6}>
             <Box>
                         <Button sx={{
-                          background:"#60D913",
+                          background:"#FFFFFF",
                           borderRadius:"10px",
-                          padding:"11px 26px",
-                          color:"#FFFFFF",
+                          padding:"11px 18px",
+                          color:"#60D913",
                           fontSize:"16px",
                           fontWeight:600,
                           textTransform:"capitalize",

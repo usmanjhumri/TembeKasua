@@ -10,13 +10,13 @@ export default function Sharp() {
         console.log(newRating);
     };
     return (
-        <Box className="Main-Box" p={3} style={{ borderRadius: "20px", }} >
+        <Box className="Main-Box" m={2}  style={{ borderRadius: "20px", }} >
             <Box style={{
 
                 background: "white",
                 borderRadius: "20px 20px 20px 20px",
-                width: "90%",
-                margin: "auto"
+                // width: "90%",
+                // margin: "auto"
 
 
             }}>
@@ -98,7 +98,8 @@ export default function Sharp() {
                                                     fontStyle: " normal",
                                                     fontWeight: 500,
                                                     lineHeight: '123.99%',
-                                                    color: "#828282"
+                                                    color: "#828282",
+                                                    fontSize:"14px"
                                                 }}>
                                                     {item.name}
                                                 </Typography>

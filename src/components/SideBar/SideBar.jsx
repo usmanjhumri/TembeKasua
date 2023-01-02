@@ -12,53 +12,54 @@ import MessageIcon from "@mui/icons-material/Message";
 import InfoIcon from "@mui/icons-material/Info";
 import MainPage from "../MainPage/MainPage";
 import PriNavbar from '../PriNavbar/PriNavbar'
-import NavBar from '../NavBar/NavBar'
+// import NavBar from '../NavBar/NavBar'
 import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
 import './SideBar.css'
 import Popup from "../Popup";
+import Header from "../Header";
 
 const MenuContainer = {
   display: "flex",
   alignItems: "center",
     gap: { md: "20px", xs: "10px" },
-    width: '180px',
+    width: '200px',
   whiteSpace:'nowrap',
   color: "grey",
   "&:hover": { color: "green", cursor: "pointer" },
 }
 const submenu = { "&:hover": { color: "green", cursor: "pointer" } };
 
-const SideBar = ({childComponent}) => {
+const SideBars = ({childComponent}) => {
   const [openSubMenu, setopenSubMenu] = useState(false);
   return (
     <div>
       <Box>
-      <PriNavbar/>
-      <NavBar/>
+      {/* <PriNavbar/> */}
+      <Header/>
         <Box sx={{ display: "flex" }}>
           <Box
             sx={{
               minWidth: "auto",
-              width: { xs: "40px", md: "200px" },
+              width: { xs: "40px", md: "215px" },
               height: "auto",
               // overflow: "hidden",
               background:"#FFFFFF",
               // marginLeft:{xs:"1.4rem",md:"4rem"},
               boxShadow:"0px 4px 6px -2px rgba(0, 0, 0, 0.15)",
               "&:hover": {
-                WebkitTransition: "width 1s ease-in-out",
-                MozTransition: "width 1s ease-in-out",
-                OTransition: "width 1s ease-in-out",
-                transition: "width 1s ease-in-out",
-                width:{md:"220px",xs:'180px'},
+                // WebkitTransition: "width 1s ease-in-out",
+                // MozTransition: "width 1s ease-in-out",
+                // OTransition: "width 1s ease-in-out",
+                // transition: "width 1s ease-in-out",
+                // width:{md:"220px",xs:'180px'},
               },
             }}
           >
             <Box
               sx={{
                 padding: { md: "20px", xs: "10px" },
-                display: "flex",
+                display: {md:"flex", xs:"none", sm:"none "},
                 flexDirection: "column",
                 gap: "20px",
               }}
@@ -216,4 +217,4 @@ const SideBar = ({childComponent}) => {
   );
 };
 
-export default SideBar;
+export default SideBars;

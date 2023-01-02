@@ -26,6 +26,7 @@ import {
   Typography,
   Divider,
   Box,
+  Container,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
 
@@ -92,7 +93,7 @@ export default function Signup() {
    <div>
 
     <Box sx={{
-      maxWidth:500
+      // maxWidth:500
     }}>
       <Button variant="outlined" onClick={handleClickOpen}>
         Signup
@@ -135,7 +136,9 @@ export default function Signup() {
 
           }}
         >
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} style={{
+            padding:"0px 3rem"
+          }}>
             <div style={{
                textAlign: "center"
                 }}>
@@ -179,11 +182,12 @@ export default function Signup() {
                   // display: "flex",
                   // justifyContent: "space-between",
                   // left:'1.5%',
-                    margin:"1rem 1rem"
+                    // margin:"0.5rem",
+                    textAlign:"center"
                 }}
                 className="Textfeid-Div"
               >
-                <TextField
+                <TextField className="inputRounded"
                   label="First Name"
                   variant="outlined"
                   {...register("FirstName", {
@@ -191,23 +195,23 @@ export default function Signup() {
                   })}
                   error={Boolean(errors.FirstName)}
                   helperText={errors.FirstName?.message}
-                  sx={{ margin:"1rem" }}
+                  sx={{ margin:"0.5rem 1.5rem", width:"143px" }}
                 />
-                <TextField
+                <TextField className="inputRounded"
                   id="outlined-basic"
                   label="Sur Name"
                   variant="outlined"
                   {...register("SurName", { required: "SurName is required." })}
                   error={Boolean(errors.SurName)}
                   helperText={errors.SurName?.message}
-                  sx={{ margin:"1rem" }}
+                  sx={{ margin:"0.5rem 1.5rem", width:"143px" }}
                 />
               </div>
             </div>
             <div className="Textfeid-Div" style={{
               textAlign:"center"
             }}>
-              <TextField
+              <TextField className="inputRounded"
                 id="outlined-basic"
                 label="E-mail"
                 variant="outlined"
@@ -215,13 +219,13 @@ export default function Signup() {
                 {...register("email", { required: "E-mail  is required." })}
                 error={Boolean(errors.email)}
                 helperText={errors.email?.message}
-                sx={{margin:"1rem 0px", width:"80%"  }}
+                sx={{ width:"80%",margin:"0.7rem 0px",  }}
               />
             </div>
             <div className="Textfeid-Div" style={{
               textAlign:"center"
             }}>
-              <TextField
+              <TextField className="inputRounded"
                 id="outlined-basic"
                 label="Password"
                 variant="outlined"
@@ -231,7 +235,7 @@ export default function Signup() {
                 })}
                 error={Boolean(errors.Password)}
                 helperText={errors.Password?.message}
-                sx={{ margin:"1rem 0px", width:"80%" }}
+                sx={{ margin:"0.7rem 0px", width:"80%", borderRadius:10 }}
               />
             </div>
             {/* Radio button */}
@@ -239,7 +243,7 @@ export default function Signup() {
             <div className="clearfix"></div>
             {/* Check box */}
             <div
-              style={{ textAlign: "center", padding: "15px",  }}
+              style={{ textAlign: "center",   }}
             >
               <Typography
                 classname="Paragraph"
@@ -247,7 +251,7 @@ export default function Signup() {
                   fontFamily: "Archivo",
                   fontStyle: "normal",
                   fontWeight: "400",
-                  fontSize: "13px",
+                  fontSize: "10px",
                   lineHeight: "14px",
                 }}
               >
@@ -263,31 +267,34 @@ export default function Signup() {
                 .
               </Typography>
             </div>
-            <div className="clearfix"></div>
-            <div style={{  textAlign: "center" }}>
-              <Button
-                variant="contained"
-                color="primary"
-                type="submit"
-                className="btns"
-                sx={{
+            {/* <div className="clearfix"></div> */}
+            <div style={{  textAlign: "center", marginTop:"0.5rem" }}>
+              <button
+                className="create-account-btn"
+                style={{
                   background: "#009933",
                   fontFamily: "Archivo",
                   fontStyle: "normal",
-                  fontWeight: 600,
+                  fontWeight: 500,
                   fontSize: "16px",
                   lineHeight: "24px",
-                  padding: "13px 22px",
-                  wordSpacing:"7px",
-                  letterSpacing:"2px"
+                  padding: "11px 26px",
+                 
+                  color:"#FFFFFF",
+                  cursor:"pointer",
+                  border:"1px solid #009933",
+                  borderRadius:"10px"
                 }}
               >
                 Create Account
-              </Button>
+              </button>
             </div>
           </form>
 
-          <Divider sx={{ paddingTop: "20px" }}>Or Continue With</Divider>
+<Container>
+          <Divider sx={{ marginTop:"0.5rem", fontSize:"12px", color:"#828282"  }}>Or Continue With</Divider>
+</Container>
+
           <div
             style={{
               display: "flex",

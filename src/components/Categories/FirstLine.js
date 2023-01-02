@@ -59,6 +59,88 @@ export const FirstLine = [
         img: MATURED_MALE_TURKEY
 
     },
+
+    {
+        name: "Ram - Fully Mature & Healthy",
+        Disprice: "₦60,000",
+        OrigPrice: "₦75,000",
+        img: RAM_GOT
+    },
+    {
+        name: "Bambara nuts",
+        Disprice: "₦700/rubber",
+        OrigPrice: "₦800",
+        img: BAMBRARA
+
+    },
+    {
+        name: "cassava",
+        Disprice: "₦600/tuber",
+        OrigPrice: "₦800",
+        img: CASSAVA
+
+    },
+    {
+        name: "Sweet Potatoes",
+        Disprice: "₦1500/rubber",
+        OrigPrice: "₦3,000",
+        img: SWEET_POTATOS
+
+    },
+    {
+        name: "Guinea Corn",
+        Disprice: "₦6,000/basin",
+        OrigPrice: "₦8,000",
+        img: SWEET_POTATOS 
+    },
+    {
+        name: "Matured Male Turkey",
+        Disprice: "₦25,000",
+        OrigPrice: "₦30,000",
+        img: MATURED_MALE_TURKEY
+
+    },
+
+    {
+        name: "Bambara nuts",
+        Disprice: "₦700/rubber",
+        OrigPrice: "₦800",
+        img: BAMBRARA
+
+    },
+    {
+        name: "Guinea Corn",
+        Disprice: "₦6,000/basin",
+        OrigPrice: "₦8,000",
+        img: SWEET_POTATOS 
+    },
+    {
+        name: "Matured Male Turkey",
+        Disprice: "₦25,000",
+        OrigPrice: "₦30,000",
+        img: MATURED_MALE_TURKEY
+
+    },
+    {
+        name: "cassava",
+        Disprice: "₦600/tuber",
+        OrigPrice: "₦800",
+        img: CASSAVA
+
+    },
+    {
+        name: "Ram - Fully Mature & Healthy",
+        Disprice: "₦60,000",
+        OrigPrice: "₦75,000",
+        img: RAM_GOT
+    },
+    {
+        name: "Sweet Potatoes",
+        Disprice: "₦1500/rubber",
+        OrigPrice: "₦3,000",
+        img: SWEET_POTATOS
+
+    },
 ]
 
 
@@ -66,95 +148,12 @@ export const FirstLine = [
 
 // second layer
 
-export const SecondLine = [
-    {
-        name: "Ram - Fully Mature & Healthy",
-        Disprice: "₦60,000",
-        OrigPrice: "₦75,000",
-        img: RAM_GOT
-    },
-    {
-        name: "Bambara nuts",
-        Disprice: "₦700/rubber",
-        OrigPrice: "₦800",
-        img: BAMBRARA
 
-    },
-    {
-        name: "cassava",
-        Disprice: "₦600/tuber",
-        OrigPrice: "₦800",
-        img: CASSAVA
-
-    },
-    {
-        name: "Sweet Potatoes",
-        Disprice: "₦1500/rubber",
-        OrigPrice: "₦3,000",
-        img: SWEET_POTATOS
-
-    },
-    {
-        name: "Guinea Corn",
-        Disprice: "₦6,000/basin",
-        OrigPrice: "₦8,000",
-        img: SWEET_POTATOS 
-    },
-    {
-        name: "Matured Male Turkey",
-        Disprice: "₦25,000",
-        OrigPrice: "₦30,000",
-        img: MATURED_MALE_TURKEY
-
-    },
-
-]
 
 
 // third layer 
 
-export const ThirdLine = [
-    {
-        name: "Bambara nuts",
-        Disprice: "₦700/rubber",
-        OrigPrice: "₦800",
-        img: BAMBRARA
 
-    },
-    {
-        name: "Guinea Corn",
-        Disprice: "₦6,000/basin",
-        OrigPrice: "₦8,000",
-        img: SWEET_POTATOS 
-    },
-    {
-        name: "Matured Male Turkey",
-        Disprice: "₦25,000",
-        OrigPrice: "₦30,000",
-        img: MATURED_MALE_TURKEY
-
-    },
-    {
-        name: "cassava",
-        Disprice: "₦600/tuber",
-        OrigPrice: "₦800",
-        img: CASSAVA
-
-    },
-    {
-        name: "Ram - Fully Mature & Healthy",
-        Disprice: "₦60,000",
-        OrigPrice: "₦75,000",
-        img: RAM_GOT
-    },
-    {
-        name: "Sweet Potatoes",
-        Disprice: "₦1500/rubber",
-        OrigPrice: "₦3,000",
-        img: SWEET_POTATOS
-
-    },
-]
 
 
 // more to love
@@ -182,20 +181,20 @@ export const MoreToLove = [
 
     },
     {
-        name: "Dried short pepper - Clean  ...",
+        name: "Dried short pepper - Clean",
         Disprice: "₦250/mudu",
         OrigPrice: "₦500",
         img: DRIED_SHORT_PAPER
 
     },
     {
-        name: "Dried Corn - Clean and well ...",
+        name: "Dried Corn - Clean and well",
         Disprice: "₦650/mudu",
         OrigPrice: "₦950",
         img: DRIED_CORN
     },
     {
-        name: "Soya beans - Clean and well ...",
+        name: "Soya beans - Clean and well",
         Disprice: "₦800/mudu",
         OrigPrice: "₦1,000",
         img: SOYA_BEANS

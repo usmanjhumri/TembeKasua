@@ -48,11 +48,11 @@ const Section_2 = () => {
     return (
         <>
 
-            <Box sx={{
-                paddingBottom: '30px'
-                , background: '#EAEAEA'
+            <Box m={2} sx={{
+              
+                background: '#EAEAEA'
             }}>
-                <div style={{ width: '90%', margin: 'auto', background: '#ffffff', padding: '20px', borderRadius: '20px' }}>
+                <div style={{  background: '#ffffff',  borderRadius: '20px' }}>
                     <Grid container>
                         <Grid sx={{ lineHeight: '32px' }} item xs={12} md={2}>
                             <div style={

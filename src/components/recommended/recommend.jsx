@@ -11,12 +11,11 @@ export default function Recommended() {
         console.log(newRating);
     };
     return (
-        <Box className="Main-Box" p={3} style={{ borderRadius: "20px" }} >
+        <Box className="Main-Box" m={2}  style={{ borderRadius: "20px" }} >
             <Box style={{
                 background: "white",
                 borderRadius: "20px 20px 20px 20px",
-                width: "90%",
-                margin: "auto"
+                
             }}>
                 <Box style={{
 
@@ -88,9 +87,9 @@ export default function Recommended() {
                                                     fontFamily: 'Archivo',
                                                     fontStyle: " normal",
                                                     fontWeight: 500,
-                                                    fontSize: '13px',
+                                                    fontSize: '14px',
                                                     lineHeight: '123.99%',
-                                                    color: "#828282"
+                                                    color: "#828282",
                                                 }}>
                                                     {item.name}
                                                 </Typography>

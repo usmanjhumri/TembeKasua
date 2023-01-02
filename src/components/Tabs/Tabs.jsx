@@ -50,10 +50,10 @@ export default function BasicTabs() {
     };
 
     return (
-        <Box sx={{ width: '100%', display: "flex", justifyContent: "center" }}>
-            <div style={{ width: "87%", background: "white", borderRadius: "20px" }}>
+        <Box m={2}>
+            <div style={{  background: "white", borderRadius: "20px" }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tabs value={value} className='home-page-tab' onChange={handleChange} aria-label="basic tabs example">
                         <Tab label="Featured Products" {...a11yProps(0)} style={{
                             fontFamily: 'Archivo',
                             fontStyle: "normal",
@@ -93,7 +93,8 @@ export default function BasicTabs() {
                                                         fontStyle: " normal",
                                                         fontWeight: 500,
                                                         lineHeight: '123.99%',
-                                                        color: "#828282"
+                                                        color: "#828282",
+                                                        fontSize:"14px"
                                                     }}>
                                                         {item.name}
                                                     </Typography>
@@ -106,14 +107,15 @@ export default function BasicTabs() {
                                                             alignItems: "center", margin: "0px",
                                                             fontFamily: 'Arial',
                                                             fontStyle: "normal",
-                                                            fontWeight: 700,
+                                                            fontWeight: 800,
+                                                            fontSize:"12px"
                                                         }}>
                                                             {item.Disprice}
                                                         </Typography>
                                                         <div >
                                                             <ReactStars
                                                                 count={5}
-                                                                size={15}
+                                                                size={13}
                                                                 activeColor="#ffd700"
                                                             />
                                                         </div>

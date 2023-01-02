@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import boyimage from './bannerImage.png'
 import './Section_1.css'
@@ -7,40 +7,46 @@ import graph from './Component 4.png'
 const Section_1 = () => {
     return (
         <>
-            <Box sx={{ paddingTop: '20px', background: '#EAEAEA' }}>
-                <div style={{ width: '90%', margin: 'auto' }}>
-                    <Grid container style={{ display: 'flex', justifyContent: 'space-around' }}>
-                        <Grid className='mb' style={{
-                            display: 'flex', paddingTop: '0', background: 'black', borderRadius: '20px',
-                            overflow: 'hidden'
-                        }} item xs={12} md={9}>
+            <Box m={2} sx={{  background: '#EAEAEA' }}>
+                <div >
+                    <Grid container >
+                        <Grid className='mb'  item xs={12} md={8}>
+
+                            <Box sx={{
+                                  background: 'black', borderRadius: '20px',
+                                  overflow: 'hidden'
+                            }}>
                             <div className='boyimg' style={{
-                                color: 'white', fontSize: '28px', padding: '45px 0px 45px 51px',
+                                color: 'white',
+                                 fontSize: '28px',
+                                 padding: '45px 0px 45px 51px',
                                 background: `url(${boyimage})`,
-                                width: '100%',
+                                // width: '100%',
                                 // height: '50%',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'right',
-                                backgroundSize: 'contain'
+                                backgroundSize: 'contain',
+                                
                             }}>
 
                                 <h1>Buy</h1>
                                 <h1 > <span style={{ color: '#60D913' }}>
                                     Agricultural Products</span> <br />at your Convienience</h1>
                             </div>
-
-                            <div style={{
-
-                            }}>
-
-                            </div>
+                            </Box>
+                            
 
 
                         </Grid>
-                        <Grid className='graph' style={{ padding: '0' }} item xs={12} md={3}>
-
-                            <img src={graph} alt="graph" />
-
+                        <Grid className='graph'  item xs={12} md={3}>
+                                <Box sx={{
+                                    display:{xs:"none", sm:"none", md:"block"}
+                                }}>
+                            <img src={graph} alt="graph" style={{
+                                width:"100%",
+                                margin:"15px 1.5rem"
+                            }}/>
+                            </Box>
                         </Grid>
                     </Grid>
                 </div>
@@ -56,11 +62,15 @@ const Section_1 = () => {
                         <Grid className='minibar' item xs={4} md={1.2} >
                             <Box sx={{
                             background: '#60D913',
-                            padding: '10px 10px',
                             borderRadius: '20px',
+                            padding:"0.5rem 0px"
+                        }}>
+                            <Typography sx={{
                             color: '#009933',
-                            textAlign: 'center'
-                        }}>Food price analysis &gt;</Box>
+                            fontSize:"10px"
+
+                            }}>Food price analysis &gt;</Typography>
+                        </Box>
                         </Grid>
                         <Grid className='minibar' item xs={4} md={1.2}>Rice ₦200</Grid>
                         <Grid className='minibar' item xs={4} md={1.2}>Rice paddy ₦100</Grid>
