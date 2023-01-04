@@ -10,12 +10,18 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MessageIcon from "@mui/icons-material/Message";
 import InfoIcon from "@mui/icons-material/Info";
+// import Header from "../Header";
+import './Sidebar.css'
+import { Link } from "react-router-dom";
+import Footer from "../footer/Footer";
+import NavBar from "../NavBar/NavBar";
+import PriNavbar from "../PriNavbar/PriNavbar";
 
 const MenuContainer = {
     display: "flex",
     alignItems: "center",
     gap: { md: "20px", xs: "10px" },
-    width: '180px',
+    // width: '180px',
     whiteSpace: 'nowrap',
     color: "grey",
     "&:hover": { color: "green", cursor: "pointer" },
@@ -24,10 +30,15 @@ const submenu = { "&:hover": { color: "green", cursor: "pointer" }, fontSize: '1
 
 
 
-export default function MSB() {
+export default function MSB({childComponent}) {
     const [openSubMenu, setopenSubMenu] = useState(false);
 
     return (
+        <div>
+            <Box>
+      <PriNavbar/>
+                <NavBar/>
+
         <Box sx={{ display: "flex" }} className='scrollbox'>
             <Box
                 sx={{
@@ -57,14 +68,22 @@ export default function MSB() {
                         <Box>
                             <HomeIcon sx={{ fontSize: "20px", color: '#828282' }} />
                         </Box>
-                        <Typography fontSize={'14px'} fontWeight={600} >Home</Typography>
+                        <Typography fontSize={'14px'} fontWeight={600} >
+                        <Link className="side_nav_links" to='/'>
+                  Home
+                  </Link>
+                        </Typography>
                     </Box>
                     <Box>
                         <Box sx={MenuContainer}>
                             <Box>
                                 <WindowIcon sx={{ fontSize: "20px", color: '#828282' }} />
                             </Box>
-                            <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600} >Categories</Typography>
+                            <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600} >
+                            <Link className="side_nav_links" to='/Categories'>
+                    Categories
+                    </Link>
+                            </Typography>
                             <IconButton
                                 onClick={() => {
                                     setopenSubMenu(!openSubMenu);
@@ -74,73 +93,124 @@ export default function MSB() {
                             </IconButton>
                         </Box>
                         {openSubMenu ? (
-                            <Box
-                                sx={{
-                                    padding: "5px 50px",
-                                    color: "grey",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    gap: "10px",
-                                }}
-                            >
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Grains</Typography>
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Tubers</Typography>
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Gingers</Typography>
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Fish</Typography>
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Furtilizer</Typography>
-                                <Typography sx={{ ...submenu, color: '#828282' }}>Tool & Equipment</Typography>
-                            </Box>
-                        ) : null}
+                  <Box
+                    sx={{
+                      padding: "5px 50px",
+                      color: "grey",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Grains">
+                         Grains
+                         </Link>
+                      </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Tubers">
+                         Tubers
+                         </Link>
+                         </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Gingers">
+                         Gingers
+                         </Link>
+                         </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Fish">
+                      Fish
+                      </Link>
+                       </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Furtilizer"> 
+                      Furtilizer
+                      </Link>
+                      </Typography>
+                    <Typography sx={submenu}>
+                      <Link className="side_nav_links" to="/Tool_&_Equipment">
+                         Tool & Equipment
+                         </Link>
+                        </Typography>
+                  </Box>
+                ) : null}
                     </Box>
                     <Box sx={MenuContainer}>
-                        <Box>
-                            <LocationOnIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>Markets</Typography>
-                    </Box>
+                <Box>
+                  <LocationOnIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                  <Link className="side_nav_links" to='/Markets'>
+                  Markets
+                  </Link>
+                  </Typography>
+              </Box>
 
-                    <Box sx={MenuContainer}>
-                        <Box>
-                            <TableChartIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>All Products</Typography>
-                    </Box>
+              <Box sx={MenuContainer}>
+                <Box>
+                  <TableChartIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                 <Link className="side_nav_links" to='/allproducts'>
+                   All Products
+                   </Link>
+                   </Typography>
+              </Box>
 
-                    <Box sx={MenuContainer}>
-                        <Box>
-                            <DeckIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>Vendors</Typography>
-                    </Box>
+              <Box sx={MenuContainer}>
+                <Box>
+                  <DeckIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                 <Link className="side_nav_links" to='/Vendors'>
+                   Vendors
+                   </Link>
+                   </Typography>
+              </Box>
 
-                    <Box sx={MenuContainer}>
-                        <Box>
-                            <LocalShippingIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>Logistics</Typography>
-                    </Box>
+              <Box sx={MenuContainer}>
+                <Box>
+                  <LocalShippingIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                 <Link className="side_nav_links" to='/Logistics'>
+                   Logistics
+                   </Link>
+                   </Typography>
+              </Box>
 
-                    <Box sx={MenuContainer}>
-                        <Box>
-                            <MessageIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>Contact Us</Typography>
-                    </Box>
+              <Box sx={MenuContainer}>
+                <Box>
+                  <MessageIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                 <Link className="side_nav_links" to='/Contact_Us'>
+                   Contact Us
+                   </Link>
+                   </Typography>
+              </Box>
 
-                    <Box sx={MenuContainer}>
-                        <Box>
-                            <InfoIcon sx={{ fontSize: "20px", color: '#828282' }} />
-                        </Box>
-                        <Typography fontSize={'14px'} sx={{ color: '#828282' }} fontWeight={600}>About</Typography>
-                    </Box>
+              <Box sx={MenuContainer}>
+                <Box>
+                  <InfoIcon sx={{ fontSize: "30px" }} />
+                </Box>
+                <Typography>
+                 <Link className="side_nav_links" to='/aboutUs'>
+                   About
+                   </Link>
+                   </Typography>
+              </Box>
                 </Box>
             </Box>
-            {/* <div>
+            <div>
                 {
                     childComponent
                 }
 
-            </div> */}
+            </div>
         </Box>
+            <Footer/>
+        </Box>
+        </div>
     );
 }

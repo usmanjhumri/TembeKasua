@@ -1,0 +1,19 @@
+
+
+.inputRounded .MuiOutlinedInput-root{
+    border-radius: 13px;
+ }
+ @media (max-width: 600px){
+    .create-account-btn{
+        padding: 5.5px 13px;
+    }
+ }
+
+
+
+
+
+
+.Button:hover {
+    background-color: #BDBDBD !important;
+}
