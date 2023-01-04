@@ -3,6 +3,7 @@ import React from 'react'
 import ReactStars from "react-rating-stars-component";
 import Data from './MSection_2Data'
 import Progress from 'react-progressbar';
+import './Msection_2.css'
 
 const MSection_2 = () => {
     const ratingChanged = (newRating) => {
@@ -10,15 +11,15 @@ const MSection_2 = () => {
     };
     return (
         <>
-            <Box m={2} sx={{ background: '#EAEAEA' }}>
-                <div style={{   }}>
-                    <Grid sx={{ background: '#FFFFFF', borderRadius: '20px',  }} container>
+            <Box sx={{ background: '#EAEAEA' }}>
+                <div style={{ width: '90%', margin: 'auto' }}>
+                    <Grid sx={{ background: '#FFFFFF', borderRadius: '20px', padding: '20px' }} container>
                         {
                             Data.map((item) => {
                                 return (
                                     <>
-                                        <Grid item xs={12} sm={6} md={2} >
-                                            <Box sx={{ padding: "10px" }}>
+                                        <Grid item xs={12} sm={4} md={2} >
+                                            <Box sx={{ padding: "20px" }}>
 
                                                 <img
                                                     style={{ borderRadius: "15px", width: "100%" }}
@@ -27,17 +28,14 @@ const MSection_2 = () => {
                                                     fontFamily: 'Archivo',
                                                     fontStyle: " normal",
                                                     fontWeight: 500,
-                                                    // lineHeight: '123.99%',
+                                                    lineHeight: '123.99%',
                                                     color: "#828282",
-                                                    fontSize: '12.5px',
-                                                    // padding: '05px 0px'
+                                                    fontSize: '12px',
+                                                    padding: '05px 0px'
                                                 }}>
                                                     {item.name}
                                                 </Typography>
-                                                <Box style={{
-                                                    display: 'flex',
-                                                    justifyContent: "space-between", width: "100%"
-                                                }}>
+                                                <Box className='startext'>
                                                     <Typography style={{
                                                         display: "flex",
                                                         alignItems: "center", margin: "0px",
@@ -73,21 +71,10 @@ const MSection_2 = () => {
 
                                                     <Progress completed={75} />
                                                 </div>
-                                                <div style={{ textAlign: 'center' }}>
+                                                <div className='buttondiv'>
 
 
-                                                  
-                                                <button style={{ 
-                                                        color: "#60D913", 
-                                                        background: '#FFFFFF',
-                                                         border: '2px solid #60D913', 
-                                                         fontWeight: 'bolder',
-                                                          borderRadius: "10px",
-                                                           padding: '8px 6px', 
-                                                           marginTop: '1rem',
-                                                           fontSize:"16px",
-                                                           cursor:"pointer" 
-                                                           }}>Add to Basket</button>
+                                                    <button className='cardbutton'>Add to Basket</button>
                                                 </div>
 
                                             </Box>

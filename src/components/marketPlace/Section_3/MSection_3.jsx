@@ -9,19 +9,15 @@ const MSection_3 = () => {
     };
     return (
         <>
-            <Box m={2} >
-                <div style={{
-                    background: '#FFFFFF',
-                    borderRadius:"10px"
-                }} >
-                    <Grid sx={{    }} container>
+            <Box sx={{ background: '#EAEAEA', padding: '40px 0px' }}>
+                <div style={{ width: '90%', margin: 'auto' }}>
+                    <Grid sx={{ background: '#FFFFFF', padding: '16px 40px', borderRadius: '20px' }} container>
                         <Grid item xs={12} md={12}>
-                            <Box>
                             <h3>More to love</h3>
-                            <Divider/>
-                            </Box>
                         </Grid>
-                      
+                        <Grid sx={{ margin: '10px 0px' }} item xs={12} md={12}>
+                            <Divider />
+                        </Grid>
 
                         {
                             Data.map((item) => {

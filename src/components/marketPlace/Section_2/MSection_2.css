@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.startext{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.buttondiv{
+    text-align: center;
+}
+.cardbutton{
+    color: #60D913 ;
+    background: #FFFF ;
+    border: 2px solid #60D913 ;
+    font-weight: bolder ;
+    border-radius: 10px ;
+    padding: 9px 19px ;
+    margin-top: 5px ;
+    cursor: pointer !important;
+}
+
+
+
+
+@media screen and (max-width: 1138px) {
+    .startext{
+        display: block;
+    }
+    .cardbutton{
+        font-size: 9px;
+    }
+  }
+@media screen and (max-width: 900px) {
+    .startext{
+        display: flex;
+    }
+    .cardbutton{
+        font-size: 20px;
+    }
+    
+  }

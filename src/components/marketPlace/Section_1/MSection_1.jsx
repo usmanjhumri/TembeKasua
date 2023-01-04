@@ -1,12 +1,22 @@
-import { Box, Grid } from '@mui/material'
-import React from 'react'
+import React, {useState} from 'react'
+import { Box, Grid, TextField } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import Data from './MSection_1data'
 import './MSection_1.css'
+// import dayjs from 'dayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+
 
 
 const MSection_1 = () => {
+    const [value, setValue] = useState(dayjs('2014-08-18T21:11:54'));
+
+    const handleChange = (newValue) => {
+        setValue(newValue);
+    };
     return (
         <>
             <Box sx={{ background: '#EAEAEA' }}>
@@ -39,12 +49,17 @@ const MSection_1 = () => {
                                 <div style={{
                                     display: 'flex', alignItems: 'center', color: '#FFFFFF'
                                 }}>
+                                    {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                        <p style={{ cursor: 'pointer' }}>
+                                            <DesktopDatePicker
+                                                label="View calendar"
+                                                inputFormat="MM/DD/YYYY"
+                                                value={value}
+                                                onChange={handleChange}
+                                                renderInput={(params) => <TextField {...params} />}
+                                            /></p>
+                                    </LocalizationProvider> */}
 
-                                    <p>View full <br /> calendar</p>
-                                    <p style={{
-                                        fontSize: '23px',
-                                        marginLeft: '10px'
-                                    }}>&gt;</p>
                                 </div>
                             </Grid>
                             <Grid sx={{ position: 'relative', margin: 'auto' }} xs={12} md={11}>
@@ -61,7 +76,7 @@ const MSection_1 = () => {
                                         enabled: true
                                     }}
                                     spaceBetween={30}
-                                    slidesPerView={6}
+                                    slidesPerView={4}
                                     autoplay={{ delay: 3000 }}
                                     loop
                                     breakpoints={{
