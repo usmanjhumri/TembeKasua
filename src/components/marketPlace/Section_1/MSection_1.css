@@ -1,0 +1,44 @@
+.nextArrowM{
+    background-color:#E0E0E0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+    font-weight: 100;
+    border-radius: 6px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+.preArrowM{
+    background-color:#E0E0E0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+    font-weight: 100;
+    border-radius: 6px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+.btn-swiperM{
+    color: #FFFFFF;
+    background-color: #009933;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 07px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+
+
+@media only screen and (max-width: 730px) {
+    .weaklyP{
+        display: none;
+    }
+  }

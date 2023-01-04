@@ -1,0 +1,13 @@
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+    color: black !important;
+}
+#navinput:focus{
+    border: 1px solid #BDBDBD;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav_search_btn{
+        margin-left: 2rem;
+    }
+  }
+

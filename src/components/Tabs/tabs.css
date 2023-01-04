@@ -1,0 +1,11 @@
+
+.css-1aquho2-MuiTabs-indicator {
+    background-color: #009933 !important;
+}
+
+.home-page-tab .Mui-selected{
+    color: #828282 !important;
+    border-bottom: 1px solid #FFFFFF !important;
+    /* margin-bottom: 1rem !important; */
+
+}

@@ -1,0 +1,7 @@
+.AddToBsktBtn:hover{
+    background: green;
+    color: #FFFFFF;
+}
+.AddToBsktBtn{
+    transition: all 0.5s ease;
+}
